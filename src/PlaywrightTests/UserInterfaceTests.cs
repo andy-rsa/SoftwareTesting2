@@ -6,10 +6,10 @@
 // ==================================
 
 namespace PlaywrightTests;
-using xUnit;
+using Microsoft.Playwright;
 
 [TestFixture]
-public class UserInterfaceTests
+public class UserInterfaceTests : IClassFixture<PlaywrightFixture>
 {
     //https://medium.com/version-1/playwright-a-modern-end-to-end-testing-for-web-app-with-c-language-support-c55e931273ee#:~
     [Fact]
