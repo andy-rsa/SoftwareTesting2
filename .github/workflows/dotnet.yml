@@ -23,7 +23,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore ./src/SoftwareTesting.sln
     - name: Install playwright browsers
       run: npx playwright install --with-deps
     - name: Run tests
