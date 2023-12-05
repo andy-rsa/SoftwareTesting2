@@ -6,6 +6,7 @@
 // ==================================
 
 namespace PlaywrightTests;
+using xUnit;
 
 public class UserInterfaceTests
 {
