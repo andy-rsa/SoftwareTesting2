@@ -30,4 +30,4 @@ jobs:
       run: pwsh ./src/PlaywrightTests/bin/Debug/net6.0/playwright.ps1 install 
       #run: npx playwright install --with-deps
     - name: Run tests
-      run: npx playwright test ./src/PlaywrightTests/UserInterfaceTests.cs
+      run: dotnet test ./src/PlaywrightTests/UserInterfaceTests.cs --no-build --verbosity normal
