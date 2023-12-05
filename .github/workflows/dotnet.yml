@@ -21,9 +21,11 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/SoftwareTesting.sln
+    - name: Install playwright browsers
+      run: npx playwright install --with-deps
     - name: Build
-      run: dotnet build --no-restore ./src/SoftwareTesting.sln
+      run: dotnet build --no-restore
     - name: Install playwright browsers
       run: npx playwright install --with-deps
     - name: Run tests
